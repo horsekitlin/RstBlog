@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class='row'>
+    <div class='small-12 columns'>
+        {% include 'compoents/bar/basic.tpl' %}
+    </div>
+</div>
+
+<div class='row'>
+    <div class='small-12 columns'>
+        <div class='small-4 columns'>
+            {% include 'compoents/bar/left_bar.tpl' %}
+        </div>
+
+        <div class='small-8 columns'>
+            {% for p in posts %}
+                <h2>{{ p.topic }}</h2>
+                <p class='text-right'><a href="/blog/show/{{ p.id }}">繼續閱讀......</a></p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

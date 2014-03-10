@@ -1,0 +1,6 @@
+{% extends 'layout.html' %}
+{% block body %}
+{% for k in errors %}
+<p>{{ errors[k] }}</p>
+{% endfor %}
+{% endblock %}

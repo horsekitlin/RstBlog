@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class='row'>
+    <div class='small-12 columns'>
+        {% include 'compoents/bar/basic.tpl' %}
+    </div>
+</div>
+<div class='row'>
+    <div class='small-12 columns'>
+        <div class='small-4 columns'>
+            {% include 'compoents/bar/left_bar.tpl' %}
+        </div>
+        <div class='small-8 columns'>
+            <form action='/create' method='POST' enctype=multipart/form-data>
+                <fieldset>
+                    <label for="">Topic:</label>
+                    <input type="text" name='topic'>
+                    <label for="">Tag:</label>
+                    <input type="text">
+                    <label for="">catalog</label>
+                    <input type="text" name='catalog'>
+                    <input type="file" name='rst'>
+                    <input type="date" name='date'>
+                    <textarea name='desc'></textarea>
+                    <input type="submit" value='上傳'>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
